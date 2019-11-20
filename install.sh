@@ -90,6 +90,7 @@ CFLAGS="-pipe -O3 -W -Wall -Wpointer-arith -Wno-unused-parameter -Wunused-functi
     --add-module=modules/headers-more-nginx-module-0.33 \
     --add-module=modules/ngx_devel_kit-0.3.0 \
     --add-module=modules/lua-nginx-module-0.10.15 \
+    --add-module=modules/ngx_http_consistent_hash \
     --with-ld-opt="-lstdc++ -Wl,-rpath,${LUAJIT_LIB}"
 
 make -j12 || exit
@@ -103,3 +104,8 @@ cp ../html/* ${install_dir}/html/ -r
 
 # 解压后的nginx/lib下为主要的resty lib库
 cp lib/* ${install_dir}/lib/ -r
+
+cd ${install_dir}/
+git init
+git add ./*
+git commit -m '原始数据'
