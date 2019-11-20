@@ -78,7 +78,7 @@ make && make install
 cd ../..
 echo "******lfs"
 
-CFLAGS="-pipe -O3 -W -Wall -Wpointer-arith -Wno-unused-parameter -Wunused-function -Wunused-variable -Wunused-value -Werror" 
+CFLAGS="-pipe -g -O0 -W -Wall -Wpointer-arith -Wno-unused-parameter -Wunused-function -Wunused-variable -Wunused-value -Werror" 
 ./configure \
     --prefix=${install_dir} \
     --with-pcre=./3party/pcre-${pcre_version} \
