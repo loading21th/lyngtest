@@ -91,6 +91,8 @@ CFLAGS="-pipe -g -O0 -W -Wall -Wpointer-arith -Wno-unused-parameter -Wunused-fun
     --add-module=modules/ngx_devel_kit-0.3.0 \
     --add-module=modules/lua-nginx-module-0.10.15 \
     --add-module=modules/ngx_http_consistent_hash \
+    --add-module=modules/ngx_http_sticky_module \
+    --add-module=modules/echo-nginx-module-0.62rc1 \
     --with-ld-opt="-lstdc++ -Wl,-rpath,${LUAJIT_LIB}"
 
 make -j12 || exit
