@@ -83,6 +83,8 @@ CFLAGS="-pipe -g -O0 -W -Wall -Wpointer-arith -Wno-unused-parameter -Wunused-fun
     --prefix=${install_dir} \
     --with-pcre=./3party/pcre-${pcre_version} \
     --with-pcre-jit \
+    --with-debug \
+    --with-http_v2_module \
     --with-http_stub_status_module \
     --with-http_ssl_module \
     --with-openssl=./3party/openssl-$openssl_version \
